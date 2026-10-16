@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Dashboard - LLMS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f9;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: #24476b;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        main {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 20px;
+        }
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px #00000015;
+        }
+        h2 {
+            color: #24476b;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Teacher Dashboard</h1>
+        <p>Learning Management System (LLMS)</p>
+    </header>
+    <main>
+        <h2>Welcome, Teacher!</h2>
+        <div class="features">
+            <div class="card">
+                <h3>Course Management</h3>
+                <p>Manage your courses and subjects.</p>
+            </div>
+            <div class="card">
+                <h3>Assignment Management</h3>
+                <p>Create assignments and review submissions.</p>
+            </div>
+            <div class="card">
+                <h3>Marks and Grading</h3>
+                <p>Enter marks and provide student feedback.</p>
+            </div>
+            <div class="card">
+                <h3>Announcements</h3>
+                <p>Share important updates with students.</p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
