@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h1>My Academic Results</h1>
+
+    <table border="1" cellpadding="12">
+        <tr>
+            <th>Assessment</th>
+            <th>Type</th>
+            <th>Total Marks</th>
+            <th>Obtained Marks</th>
+        </tr>
+
+        {% for result in results %}
+        <tr>
+            <td>{{ result.title }}</td>
+            <td>{{ result.assessment_type }}</td>
+            <td>{{ result.total_marks }}</td>
+            <td>{{ result.obtained_marks }}</td>
+        </tr>
+        {% else %}
+        <tr>
+            <td colspan="4">No results available.</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <br>
+    <a href="/">Back to Home</a>
+</body>
+</html>

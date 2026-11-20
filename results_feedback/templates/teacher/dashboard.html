@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Teacher Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <h1>Teacher Dashboard</h1>
+    <h2>Results & Feedback Management</h2>
+
+    <div>
+        <h3>Manage Student Results</h3>
+        <a href="/teacher/add-result">Add Student Results</a>
+        <br><br>
+        <a href="/teacher/manage-results">View All Results</a>
+    </div>
+
+    <div>
+        <h3>Student Feedback</h3>
+        <a href="/teacher/feedback">Give Student Feedback</a>
+    </div>
+
+    <br>
+    <a href="/">Back to Home</a>
+
+</body>
+</html>

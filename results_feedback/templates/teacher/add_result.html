@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Student Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h1>Add Student Result</h1>
+
+    <form method="POST">
+        <label>Assessment:</label><br>
+        <select name="assessment_id" required>
+            {% for assessment in assessments %}
+            <option value="{{ assessment.assessment_id }}">
+                {{ assessment.title }} ({{ assessment.total_marks }} marks)
+            </option>
+            {% endfor %}
+        </select><br>
+
+        <label>Student ID:</label><br>
+        <input type="number" name="student_id" required><br>
+
+        <label>Obtained Marks:</label><br>
+        <input type="number" step="0.5" name="obtained_marks" required><br>
+
+        <button type="submit">Save Result</button>
+    </form>
+
+    <a href="/teacher/dashboard">Back to Dashboard</a>
+</body>
+</html>
