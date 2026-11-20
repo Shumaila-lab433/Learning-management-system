@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Teacher Feedback</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h1>Give Student Feedback</h1>
+
+    <form method="POST">
+        <label>Student ID:</label><br>
+        <input type="number" name="student_id" required><br>
+
+        <label>Teacher ID:</label><br>
+        <input type="number" name="teacher_id" required><br>
+
+        <label>Course ID:</label><br>
+        <input type="number" name="course_id" required><br>
+
+        <label>Feedback Message:</label><br>
+        <textarea name="message" required></textarea><br>
+
+        <button type="submit">Submit Feedback</button>
+    </form>
+
+    <h2>All Feedback</h2>
+
+    {% for item in feedback_list %}
+        <div>
+            <p><b>Student ID:</b> {{ item.student_id }}</p>
+            <p>{{ item.message }}</p>
+        </div>
+    {% endfor %}
+
+    <a href="/teacher/dashboard">Back to Dashboard</a>
+</body>
+</html>

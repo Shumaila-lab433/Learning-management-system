@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Manage Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h1>Student Results</h1>
+
+    <table border="1" cellpadding="12">
+        <tr>
+            <th>Result ID</th>
+            <th>Assessment ID</th>
+            <th>Student ID</th>
+            <th>Obtained Marks</th>
+        </tr>
+
+        {% for result in results %}
+        <tr>
+            <td>{{ result.result_id }}</td>
+            <td>{{ result.assessment_id }}</td>
+            <td>{{ result.student_id }}</td>
+            <td>{{ result.obtained_marks }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <br>
+    <a href="/teacher/dashboard">Back to Dashboard</a>
+</body>
+</html>

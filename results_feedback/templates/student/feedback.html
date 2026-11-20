@@ -1,0 +1,23 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Feedback</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h1>My Teacher Feedback</h1>
+
+    {% for item in feedback_list %}
+    <div>
+        <h3>Teacher Feedback</h3>
+        <p>{{ item.message }}</p>
+        <small>Date: {{ item.created_at }}</small>
+    </div>
+    {% else %}
+    <p>No feedback available yet.</p>
+    {% endfor %}
+
+    <a href="/">Back to Home</a>
+</body>
+</html>
