@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Learning Management System</title>
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+
+    <div class="login-box">
+        <h2>LMS Login</h2>
+        <p>Welcome back! Please login to your account.</p>
+
+        <!-- Global Error/Success Message Box -->
+        <div id="messageBox" class="message-box"></div>
+
+        <form id="loginForm" novalidate>
+            <div class="input-group">
+                <label for="email">Email <span class="required">*</span></label>
+                <input type="email" id="email" placeholder="Enter your email">
+                <span class="error-text" id="emailError"></span>
+            </div>
+
+            <div class="input-group">
+                <label for="password">Password <span class="required">*</span></label>
+                <input type="password" id="password" placeholder="Enter your password">
+                <span class="error-text" id="passwordError"></span>
+            </div>
+
+            <div class="input-group">
+                <label for="role">Login As <span class="required">*</span></label>
+                <select id="role">
+                    <option value="" disabled selected>Select your role</option>
+                    <option value="student">Student</option>
+                    <option value="teacher">Teacher</option>
+                </select>
+                <span class="error-text" id="roleError"></span>
+            </div>
+
+            <button type="submit" class="login-btn">Login</button>
+        </form>
+    </div>
+
+    <script src="js/login.js"></script>
+</body>
+</html>
